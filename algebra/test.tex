@@ -1,0 +1,1362 @@
+% -*- coding:utf-8 -*-
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[english,russian]{babel}
+\newenvironment{note}{\paragraph{NOTE:}}{}
+\newenvironment{field}{\paragraph{field:}}{}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+\newtheorem{theorem}{Th}
+
+\begin{document}
+
+\section{Перестановки. Их свойства. Четная и нечетная перестановка.
+Транспозиция.}
+
+\begin{note}
+
+  \begin{field}
+    Перестановки
+  \end{field}
+
+  \begin{field}
+    Пусть $\Omega$ --- множество, $|\Omega| = n$. Занумеровав эти элементы,
+    считаем $\Omega = \{1, 2, \ldots, n\}$. Тогда перестановки --- биекции
+    $\sigma : \Omega \rightarrow \Omega$.
+    \begin{equation*}
+      \sigma = \begin{pmatrix}
+                 1 & 2 & \cdots & n \\
+                 i_{1} & i_{2} & \cdots & i_{n}
+               \end{pmatrix}
+    \end{equation*}
+
+    $S_{n}$ --- множество всех перестановок из $n$ элементов.
+
+    Произведение перестановок --- $(\sigma \tau) = \sigma(\tau(i))$.
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Свойства перестановок
+  \end{field}
+  \begin{field}
+    \begin{enumerate}
+      \item
+      $\sigma \tau \neq \tau \sigma$
+      \item
+      $(\sigma \tau) \pi = \sigma (\tau \pi)$ (т.к. это отображения)
+      \item
+      существует $e$ и $\sigma^{-1}$
+    \end{enumerate}
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Четная и нечетная перестановка
+  \end{field}
+  \begin{field}
+    $A_{n}$ --- множество четных перестановок.
+
+    $(-1){}^{m}$ --- четность перестановки, где $m$ это количество транспозиций в
+    разложении.
+
+    Четность перестановки совпадает с четностью количества циклов четной длины.
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Транспозиция
+  \end{field}
+  \begin{field}
+    Транспозиция --- цикл длины 2.
+  \end{field}
+\end{note}
+
+\section{Разложение перестановки в произведение циклов. Представление
+перестановки в виде произведения транспозиций. Представление четной перестановки
+в виде произведения циклов длины 3.}
+
+\begin{note}
+  \begin{field}
+    Разложение перестановки в произведение циклов
+  \end{field}
+  \begin{field}
+    $\sigma \in S_{n}$. $i_{1} \in \Omega$. $i_{2} = \sigma(i_{1})$, $i_{3} = \sigma(i_{2})$, $\ldots$. Т.к. $|\Omega| = n$ и $\sigma$ --- биекция, $\exists i_{k}: i_{1} = \sigma(i_{k})$.
+
+    \begin{equation*}
+      (i_{1}i_{2}\ldots{} i_{k})
+    \end{equation*}
+
+    Далее из биекции находим остальные непересекающиеся циклы.
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Представление перестановки в виде произведения транспозиций.
+  \end{field}
+
+  \begin{field}
+    Достаточно для одного цикла.
+
+    \begin{equation*}
+      (i_{1} i_{2} \cdots i_{k}) =
+      (i_{1} i_{2})(i_{2} i_{3}) \cdots
+      (i_{k-1} i_{k})
+    \end{equation*}
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Представление четной перестановки в виде произведения циклов длины 3.
+  \end{field}
+  \begin{field}
+    $\sigma \in A_{n} \Leftrightarrow \sigma разбивается на произведение циклов длины 3$.
+  \end{field}
+\end{note}
+
+\section{Группы. Их свойства. Примеры. Подгруппы.}
+
+\begin{note}
+  \begin{field}
+    Группы
+  \end{field}
+  \begin{field}
+    $(G, \circ)$
+    \begin{enumerate}
+      \item
+      ассоциативность
+      \item
+      $\exists e$
+      \item
+      $\forall a \in G \quad{} \exists a^{-1} \in G$
+    \end{enumerate}
+
+    Абелева $\Leftrightarrow \circ$ коммутативно
+
+    $|G|$ --- порядок
+
+    $a \in G, ord(a) = k$, если $a^{k} = e$ и $k$ --- минимально.
+
+    $G$ --- $p$-группа $\Leftrightarrow$ $p$ --- простое и $|G| = p^{n}$.
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Свойства групп
+  \end{field}
+  \begin{field}
+    \begin{enumerate}
+      \item
+      $e$ --- едиственна
+      \item
+      $a^{-1}$ --- единственнен
+    \end{enumerate}
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Примеры групп
+  \end{field}
+  \begin{field}
+    \begin{enumerate}
+      \item
+      $(\mathbb{Z}, +)$
+      \item
+      $(GL_{n}, \cdot)$ --- невырожденные матрицы
+      \item
+      $(S_{n}, \cdot)$
+      \item
+      $(A_{n}, \cdot)$
+    \end{enumerate}
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Подгруппы
+  \end{field}
+
+  \begin{field}
+    $(G, \circ)$. $H \subset G$ --- подгруппа $\Leftrightarrow$ $e \in H$, $H$ --- группа относительно $\circ$.
+
+    $aH = \{ah : \forall h \in H\}$ --- левый смежный класс. Любая группа распадается на непересекающиеся смежные классы.
+  \end{field}
+
+  (Теорема Лагранжа): $|G| = n$, $H \subset G$ --- подгруппа, $|H| = k$. Тогда
+  $n = k(G : H)$, где $(G : H)$ --- число смежных классов по $H$.
+
+  Циклическая --- порождается одним элементом.
+
+  $\exists g : a = g^{-1}bg$ --- $a$, $b$ сопряженные
+
+  $G$ распадается на непересекающиеся классы сопряженности.
+\end{note}
+
+\section{Действия групп на множествах. Орбиты и стабилизаторы. Их свойства.
+Формула Бернсайда.}
+
+\begin{note}
+  \begin{field}
+    Дествия групп на множествах
+  \end{field}
+  \begin{field}
+    $G$ --- группа, $M$ --- множество.
+
+    Отбражение $G \times M \rightarrow M$:
+    \begin{enumerate}
+      \item
+      $em = m \quad{} \forall m \in M$
+      \item
+      $g_{1}(g_{2}m) = (g_{1}g_{2})m$
+    \end{enumerate}
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Орбиты и стабилизаторы
+  \end{field}
+  \begin{field}
+    $St(m) = \{g \in G : gm = m\} \subset G$, подгруппа $G$
+
+    $Orb(m) = \{gm : g \in G\} \subset M$.
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Свойства орбит и стабилизаторов
+  \end{field}
+  \begin{field}
+    Имеется биекция $Orb(m) \mapsto \{g St(m) : g \in G\}$
+
+    $|G| = |Orb(m)| \cdot |St(m)|$
+
+    $m_{1}, m_{2} \in Orb(m) \Rightarrow St(m_{1}), St(m_{2})$ --- сопряжены.
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Формула Бернсайда
+  \end{field}
+  \begin{field}
+    $|G| = n, |M| = m$.
+    $M^{g} = \{m \in M : gm = m\}$.
+    Тогда $N = \frac{1}{|G|} \sum_{g \ in G} |M^{g}|$, где $N$ --- число орбит.
+  \end{field}
+\end{note}
+
+\section{Нормальные подгруппы. Гомоморфизмы групп. Ядро и факторгруппа. Первая
+теорема о гомоморфизме.}
+
+\begin{note}
+  \begin{field}
+    Нормальные подгруппы
+  \end{field}
+  \begin{field}
+    $H \vartriangleleft G \Leftrightarrow g^{-1}Hg \subset H \quad{} \forall g \in G$
+
+    (Или $gH = Hg \quad{} \forall g \in G$)
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Гомоморфизмы групп, ядро и факторгруппа
+  \end{field}
+  \begin{field}
+    $f : G \rightarrow G'$:
+    $f(ab) = f(a)f(b) \quad{} \forall a, b \in G$
+
+    $\ker(f) = \{e\} \Leftrightarrow$ инъективный гомоморфизм
+
+    $\forall g' \in G': \quad{} \exists g \in G, f(g) = g' \Leftrightarrow$ сюръективный гомоморфизм
+
+    Сюръективный и инъективный гомоморфизм это изоморфизм ($G \cong G'$)
+
+    $\ker(f) = \{ a \in G | f(a) = e \}$
+
+    Если $f$ --- гомоморфизм:
+    \begin{enumerate}
+      \item
+            $f(e) = e'$
+      \item
+            $f(a){}^{-1} = f(a^{-1})$
+      \item
+            $\ker(f) \vartriangleleft G$
+    \end{enumerate}
+
+    $G/H$ --- факторгруппа $\Leftrightarrow$ $G/H = \{gH \ | \ \forall g \in G, H \vartriangleleft G\}$.
+    $aH \circ bH \mapsto abH$
+
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    1-ая теорема о гомоморфизме групп
+  \end{field}
+  \begin{field}
+    \begin{theorem}[1-ая теорема о гомоморфизме]
+      $f$ --- сюръективный гомоморфизм $\Rightarrow \exists G/\ker(f) \cong G'$
+
+      $H \vartriangleleft G \Rightarrow \quad{} \exists \varphi : G \rightarrow G/H : \varphi$ --- сюрьъекция, $\ker(\varphi) = H$
+    \end{theorem}
+  \end{field}
+\end{note}
+
+\section{Вторая и третья теоремы о гомоморфизме. Теорема Кели.}
+
+\begin{note}
+  \begin{field}
+    2-ая теорема о гомоморфизме групп
+  \end{field}
+  \begin{field}
+    \begin{theorem}[2-ая теорема о гомоморфизме групп]
+      $H \subset G, K \vartriangleleft G \Rightarrow$
+      \begin{enumerate}
+        \item
+              $HK = KH$
+        \item
+              $HK \subset G$
+        \item
+              $HK/K \cong H/(H \cap K)$
+      \end{enumerate}
+    \end{theorem}
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    3-ая теорема о гомоморфизме групп
+  \end{field}
+  \begin{field}
+    $H \vartriangleleft G, K \vartriangleleft G, K \subset H \Rightarrow G/H \cong (G/K)/(H/K)$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Теорема Кели
+  \end{field}
+  \begin{field}
+    \begin{theorem}[Теорема Кели]
+      $|G| = n \Rightarrow \quad{} \exists f : G \rightarrow S_{n}$, $n$ --- инъективный гомоморфизм (вложение).
+    \end{theorem}
+  \end{field}
+\end{note}
+
+\section{Конечные абелевы группы. Их классификация.}
+
+\begin{note}
+  \begin{field}
+    Конечные абелевы группы
+  \end{field}
+  \begin{field}
+    В абелевой группе любая подгруппа нормальная.
+
+    \begin{theorem}[Лемма]
+      $G$ --- абелева группа, $\forall a \in G: ord(a) = p^{k}$, для какого-то
+      $k \Rightarrow |G| = p^{n}$
+    \end{theorem}
+
+    \begin{theorem}
+      $G$ --- абелева группа,
+      $G = m = p_{1}^{s_{1}} \cdot p_{2}^{s_{2}} \ldots p_{n}^{s_{n}}$
+      $\Rightarrow G \cong A_{p_{1}} \oplus \cdots \oplus A_{p_{n}}$, где
+      $A_{p_{i}}$ --- абелева группа и $|A_{P_{i}} = p_{i}^{s_{i}}$
+    \end{theorem}
+
+    \begin{theorem}
+      $G$ --- абелева $p$-группа
+      $\Rightarrow G \cong \mathbb{Z}_{p_{s_{1}}} \oplus \cdots \oplus \mathbb{Z}_{p_{s_{n}}}$
+    \end{theorem}
+
+    \begin{theorem}
+      $G$ --- абелева группа $\Rightarrow$ $G$ разлагается в прямую сумму
+      циклических $p$-групп единственным образом.
+    \end{theorem}
+  \end{field}
+\end{note}
+
+\section{Свободные абелевы группы. Их базис. Классификация конечно порождённых
+абелевых групп.}
+
+\begin{note}
+  \begin{field}
+    Свободные абелевы группы
+  \end{field}
+  \begin{field}
+    Без кручений $\Leftrightarrow \quad{} \nexists a \in A: na = 0$
+
+    Конечно порожденная абелева группа $A$ без кручений называется свободной
+    абелевой группой. Количество элементов в базисе --- ранг этой группы.
+    Обозн. $F_{n}^{ab} = \mathbb{Z} + \cdots + \mathbb{Z}$ $n$ раз.
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Базис свободной абелевой группы
+  \end{field}
+  \begin{field}
+    Система $a_{1}, a_{2}, \ldots, a_{k} \in A$ --- независимая
+    $\Leftrightarrow (n_{1}a_{1} + n_{2}a_{2} + \cdots + n_{k}a_{k} = 0 , n_{i} \in \mathbb{Z} \Rightarrow n_{1} = n_{2} = \cdots = n_{k} = 0)$
+
+    $A$ --- абелева без кручений.
+
+    Система $a_{k}$ --- базис $A$ $\Leftrightarrow$ $a_{k}$ --- независимы и порождают $A$.
+
+    Любая конечно порожденная абелева группа без кручений обладает базисом, притом все ее базисы равномощны.
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Классификация конечно порожденных абелевых групп
+  \end{field}
+  \begin{field}
+    $A$ --- конечно порожденная абелева группа
+    $Rightarrow A \cong F_{n}^{ab} \oplus B$, где $B$ --- конечная абелева группа.
+  \end{field}
+\end{note}
+
+\section{Свободные группы. Задание группы образующими и соотношениями. Примеры.}
+
+\begin{note}
+  \begin{field}
+    Свободные группы
+  \end{field}
+  \begin{field}
+    $X = \{x_{i}\}$ --- множество символов (алфавит)
+
+    $F(X)$ --- множество классов эквивалентных слов, где слово --- пустая или
+    конечная последовательность символов из $X \cup X^{-1}$, а два слова
+    эквивалентны, если после редукции (вычеркивание $x_{i}x_{i}^{-1}$ и
+    $x_{i}^{-1}x_{i}$), получаем одинаковые слова. Класс эквивалентных слов обозн. $[u]$.
+
+    На $F(X)$ введем операцию $[u][v] = [uv]$. Тогда $F(X)$ --- свободная
+    группа. Если $X$ --- конечно, то конечно порожденная свободная группа.
+    $|X|$ --- степень свободы.
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Задание группы образующими и соотношениями. Примеры
+  \end{field}
+  \begin{field}
+    $G$ --- группа, порожденная $g_{1}, g_{2}, \ldots, g_{n}$.
+    $X$ --- алфавит: $x_{1}, x_{2}, \ldots, x_{n}$.
+    $\Rightarrow$
+    $f : X \rightarrow M$, $f(x_{i}) = g_{i}$
+    единственным образом продолжается до гомоморфизма групп
+    $\overline{f}: F(X) \rightarrow G$:
+
+    Элементы $\ker \overline{f}$ --- соотношения группы $G$ в алфавите $X$. Если множество соотношений $H'$ такого, что минимальная нормальная подгруппа в $F(X)$ содержащая $H'$, совпадает с $H$, то $H'$ --- определяющее множество соотношений
+
+    $H' = \{x_{i}x_{j}x_{i}^{-1}x_{j}^{-1} | 1 \leq i < j \leq n\}$
+    определяют свободную абелеву группу.
+  \end{field}
+\end{note}
+
+\section{Кольца. Определение и основные свойства. Примеры.}
+
+\begin{note}
+  \begin{field}
+    Кольца
+  \end{field}
+  \begin{field}
+    $(A, +, \cdot)$ --- кольцо, если:
+    \begin{enumerate}
+      \item
+      $(A, +)$ --- абелева группа
+      \item
+      $a(bc) = (ab)c$ и $\exists e$
+      \item
+      $(x + y)z = xz + yz$ и $z(x + y) = zx + zy$
+    \end{enumerate}
+
+    $ab = ba \Rightarrow$ коммутативное
+
+    $\exists a^{-1} \Rightarrow$ тело
+
+    тело, где $ab = ba$ это поле
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Свойства кольца
+  \end{field}
+  \begin{enumerate}
+    \item
+    $a \cdot 0 = 0 \cdot a = 0$
+    \item
+    $(-a)b = a(-b) = -(ab)$
+    \item
+    $(-a)(-b) = ab$
+  \end{enumerate}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Примеры колец
+  \end{field}
+  \begin{field}
+    $\mathbb{Z}$ --- коммутативное кольцо
+
+    $\mathbb{Q}, \mathbb{R}, \mathbb{C}$ --- поля
+
+    $M_{n \times m}$ некоммутативное кольцо
+
+    $Z_{m} = \{0, 1, \ldots, m-1\}$ --- множество остатков при делении на $m$,
+    коммутативное кольцо.
+  \end{field}
+\end{note}
+
+\section{Идеалы. Факторкольца. Гомоморфизмы колец. Теорема о гомоморфизме для
+колец. Прямое произведение колец. Группа единиц.}
+
+\begin{note}
+  \begin{field}
+    Идеалы
+  \end{field}
+  \begin{field}
+    $\mathbf{a} \subset A$ --- левый идеал кольца $A$
+    $\Leftrightarrow$
+    $\mathbf{a}$ --- подгруппа относительно сложения и
+    $ax \in \mathbf{a} \forall a \in A, x \in \mathbf{a}$
+    (т.е. $A\mathbf{a} \subset \mathbf{a}$)
+
+    (Двусторонний) \emph{идеал} --- левый и правый идеал.
+
+    $\mathbf{a}, \mathbf{b}$ --- идеалы $\Rightarrow$ $\mathbf{a} \cap \mathbf{b}$ --- тоже идеал
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Факторкольца
+  \end{field}
+  \begin{field}
+    $A/\mathbf{a}$, элементы --- смежные классы $x + \mathbf{a}$.
+    $(x + \mathbf{a})+(y + \mathbf{a}) = (x + y)+\mathbf{a}$,
+    $(x + \mathbf{a})(y + \mathbf{a}) = xy+\mathbf{a}$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Гомоморфизмы колец
+  \end{field}
+  \begin{field}
+    $f : A \rightarrow B$:
+    \begin{itemize}
+      \item
+      $f(a + b) = f(a) + f(b)$
+      \item
+      $f(ab) = f(a)f(b)$
+    \end{itemize}
+
+    $\ker(f) = \{a | f(a) = 0\}$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Теорема о гомоморфизме для колец
+  \end{field}
+  \begin{field}
+    \begin{theorem}[Теорема о гомоморфизме для колец]
+      $f : A \rightarrow B$ --- сюръективный гомоморфизм колец
+      $\Rightarrow \exists! A/\ker(f) \cong B$.
+
+      $\mathbf{a} \subset A$ --- идеал кольца $A$
+      $\Rightarrow \quad{} \exists! \varphi : a \rightarrow A/\mathbf{a} : \varphi$ --- сюръекция, $\ker(\varphi) = \mathbf{a}$
+    \end{theorem}
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Прямое произведение колец
+  \end{field}
+  \begin{field}
+    $A \times B = \{(a, b) | a \in A, b \in B\}$:
+    \begin{itemize}
+      \item
+      $(a_{1}, b_{1}) + (a_{2}, b_{2}) = (a_{1} + a_{2}, b_{1} + b_{2})$
+      \item
+      $(a_{1}, b_{1})(a_{2}, b_{2}) = (a_{1}a_{2}, b_{1}b_{2})$
+      \item
+      ноль --- $(0, 0)$, $e$ --- $(1, 1)$
+    \end{itemize}
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Группа единиц
+  \end{field}
+  \begin{field}
+    $U \subset A$ --- множество обратимых элементов, называется группой единиц,
+    а ее элементы --- единицами кольца $A$.
+  \end{field}
+\end{note}
+
+\section{Коммутативные кольца. Максимальные и простые идеалы. Их свойства.
+Критерий того, что факторкольцо является полем.}
+
+\begin{note}
+  \begin{field}
+    Максимальный и простой идеал
+  \end{field}
+  \begin{field}
+    $A$ --- коммутативное кольцо
+
+    Идеал $\mathbf{p} \subset A$ --- простой
+    $\Leftrightarrow$ ($xy \in \mathbf{p} \Rightarrow x \in \mathbf{p}$ либо $y \in \mathbf{p}$)
+
+    $\mathbf{p}$ --- максимальный $\Leftrightarrow \nexists \mathbf{a} \neq A : \mathbf{m} \mathbf{a}$ и $\mathbf{m} \neq \mathbf{a}$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Свойства максимального и простого идеала
+  \end{field}
+  \begin{field}
+    \begin{enumerate}
+      \item
+            $\mathbf{p} \subset A$ --- простой
+            $\Leftrightarrow A/\mathbf{p}$ --- целостно
+      \item
+            всякий максимальный идеал --- простой
+      \item
+            $f : A \rightarrow B$ --- гомоморфизм,
+            $\mathbf{p'}$ --- простой идеал кольца $B$
+            $\Rightarrow \mathbf{p} = f^{-1}(\mathbf{p'})$ ---
+            простой идеал кольца $A$
+    \end{enumerate}
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Критерий того, что факторкольцо является полем
+  \end{field}
+  \begin{field}
+    $A/\mathbf{m}$ --- поле
+    $\Leftrightarrow \mathbf{m}$ --- максимальный идеал
+    кольца $A$
+  \end{field}
+\end{note}
+
+\section{Китайская теорема об остатках. Ее следствия.}
+
+\begin{note}
+  \begin{field}
+    Китайская теорема об остатках
+  \end{field}
+  \begin{field}
+    $A$ --- коммутативное кольцо,
+    $\mathbf{a_{1}}, \mathbf{a_{2}}, \ldots, \mathbf{a_{n}}$ --- идеалы $A$, $\mathbf{a_{i}} + \mathbf{a_{j}} = A \forall i \neq j$
+    $\Rightarrow \forall$ семейства $x_{1}, x_{2}, \ldots, x_{n} \in A \exists x \in A: x \equiv x_{i} (\mod \mathbf{a_{i}}) \forall i$
+
+    $x \equiv y (\mod \mathbf{a}) \Leftrightarrow x - y \in \mathbf{a}$
+
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Следствия из китайской теоремы об остатках
+  \end{field}
+  \begin{field}
+    \begin{theorem}[Следствие]
+      $A$ --- коммутативное кольцо,
+    $\mathbf{a_{1}}, \mathbf{a_{2}}, \ldots, \mathbf{a_{n}}$ --- идеалы $A$,
+    $\mathbf{a_{i}} + \mathbf{a_{j}} = A \forall i \neq j$,
+    $f : A \rightarrow (A/ \mathbf{a_{1}}) \ times (A/ \mathbf{a_{2}}) \times \cdots \times (A/ \mathbf{a_{n}})$
+    --- отображение, индуцированное каноническими отображениями $A$ в $A/ \mathbf{a_{i}}$ для каждого множителя
+    $\Rightarrow \ker f = \mathbf{a_{1}} \cap \mathbf{a_{2}} \cap \cdots \cap \mathbf{a_{n}}$ и
+    $A/(\mathbf{a_{1}} \cap \mathbf{a_{2}} \cap \cdots \cap \mathbf{a_{n}}) \cong (A/\mathbf{a_{1}}) \times (A/\mathbf{a_{2}}) \times \cdots \times (A/\mathbf{a_{n}})$
+    \end{theorem}
+
+    \begin{theorem}[Для целых чисел]
+      $m_{1}, m_{2}, \ldots, m_{n}$ --- попарно взаимно простые целые числа
+      $\Rightarrow \forall x_{1}, x_{2}, \ldots, x_{n} \exists x \in \mathbb{Z}: x \equiv x_{i} (\mod m_{i}) \forall i$
+    \end{theorem}
+  \end{field}
+\end{note}
+
+\section{Главные идеалы. Кольцо главных идеалов. Примеры. Целостные и
+факториальные кольца.}
+
+\begin{note}
+  \begin{field}
+    Главный идеал
+  \end{field}
+  \begin{field}
+    $\mathbf{a}$ --- главный
+    $\Leftrightarrow \exists a \in A: \mathbf{a} = aA$
+
+    Обозн. $\mathcal{a} = (a)$
+
+    $(m)$ --- идеал $\mathbb{Z}$ $\Rightarrow \mathbb{Z}/(m) = /mathbb{Z}_{m}$ и
+    существует естественное отображение
+    $f : \mathbb{Z} \rightarrow \mathbb{Z}_{m}$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Кольцо главных идеалов
+  \end{field}
+  \begin{field}
+    Кольцо главных идеалов $\Leftrightarrow$
+    все идеалы главные
+
+    $\mathbb{Z}$ --- кольцо главных идеалов
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Целостное кольцо
+  \end{field}
+  \begin{field}
+    целостное кольцо $\Leftrightarrow$ $\nexists a, b: ab=0$
+
+    (или кольцо без делителей нуля)
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Факториальное кольцо
+  \end{field}
+  \begin{field}
+    $A$ --- факториальное $\Leftrightarrow$ целостное и всякий элемент имеет
+    однозначное разложение на неприводимые.
+
+    $a \neq 0, a \in A (целостное), (a)$ --- простой главный идеал
+    $\Leftrightarrow$ $a$ --- неприводим.
+
+    $\forall a \in A, a \neq 0$ обладает однозначным разложением на
+    неприводимые, если: $\exists u$ --- единица и неприводимые элементы
+    $p_{1}, p_{2}, \ldots, p_{k}$ такие, что $a = up_{1}p_{2}\cdots p_{k}$.
+    Причем для двух таких разложений
+    $a = u p_{1}p_{2}\cdots p_{k} = u' q_{1} q_{2} \cdots q_{m}$,
+    $m = k$ и, с точностью до перестановки,
+    $q_{i} = u_{i}p_{i}$, где $u_{i}$ --- единицы в $A$.
+  \end{field}
+\end{note}
+
+\section{НОД. Теорема о том, что любое кольцо главных идеалов факториально.
+Примеры.}
+
+\begin{note}
+  \begin{field}
+    НОД
+  \end{field}
+  \begin{field}
+    $a$ делит $b$
+    $\Leftrightarrow$
+    $\exists c \in A: b = ac$.
+
+    $d$ --- НОД $a$ и $b$
+    $\Leftrightarrow$
+    любой $c$, делящий $a$ и $b$, делит также $d$.
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Теорема о том, что любое кольцо главных идеалов факториально.
+  \end{field}
+  \begin{field}
+    Всякое целостное кольцо главных идеалов факториально.
+
+    Пример: $\mathbb{Z}$, группа единиц состоит из $1$ и $-1$.
+    Неприводимые --- простые числа.
+
+    $\mathbb{R}[x], \mathbb{Q}[x]$
+  \end{field}
+\end{note}
+
+\section{Локализация. Ее свойства. Примеры.}
+
+\begin{note}
+  \begin{field}
+    Локализация
+  \end{field}
+  \begin{field}
+    $A$ --- коммутативное кольцо,
+    $S \subset A$ --- мультипликативное подмножество,
+    если $1 \in S$ и $x, y \in S \Rightarrow xy \in S$.
+
+    $(a, s) \equiv (a', s') \Leftrightarrow \exists s'' \in S: s''(as' - sa') = 0$ --- отношение эквивалентности.
+
+    $S^{-1}A$ --- множество классов эквивалентности (кольцо). Эл-ты: $\frac{a}{s}$, $\frac{s}{s}$ --- единица.
+
+    $(\frac{a}{s})(\frac{a'}{s'}) = \frac{aa'}{ss'}$
+
+    $\frac{a}{s} + \frac{a'}{s'} = \frac{as' + a's}{ss'}$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Свойства локализации
+  \end{field}
+  \begin{field}
+    $\varphi_{S}A \rightarrow S^{-1}A$, $\varphi_{S}(a) = \frac{a}{1}$
+
+    $a$ --- целостное кольцо, $S$ --- мультипликативное множество, не содержащее нуля.
+    $\Rightarrow$ $\varphi_{S}$ --- инъективный гомоморфизм
+
+    $S \subset S^{-1}A$ обратимо
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Примеры локализации
+  \end{field}
+  \begin{field}
+    $A$ --- целостное кольцо, $S$ состоит из обратимых элементов
+    $\Rightarrow$ $S^{-1}A = A$
+
+    $A$ --- целостное кольцо, $S$ --- множество его ненулевых элементов
+    $\Rightarrow$ $S$ --- мультипликативное множество,
+    $S^{-1}A$ --- поле (назыв. \emph{полем частных} кольца $A$).
+
+    Например, $\mathbb{Q}$ --- поле частных кольца $\mathbb{Z}$
+  \end{field}
+\end{note}
+
+\section{Многочлены. Определения свойства. Трансцендентные и алгебраические
+  элементы.}
+
+% 36
+
+\begin{note}
+  \begin{field}
+    Многочлены
+  \end{field}
+
+  \begin{field}
+    $A$ --- коммутативное кольцо. Построим кольцо $B$, эл-ты:
+    $f = (a_{0}, a_{1}, \ldots, a_{n}, \ldots), a_{i} \in A$,
+    где конечное число $a_{i} \neq 0$
+
+    $f + g = (a_{0}, \ldots, a_{n}, \ldots) + (b_{0}, \ldots, b_{n}, \ldots) = (a_{0} + b_{0}, \ldots, a_{n} + b_{n}, \ldots)$
+
+    $f \cdot g = (a_{0}, \ldots, a_{n}, \ldots) + (b_{0}, \ldots, b_{n}, \ldots) = (h_{0}, \ldots, h_{n}, \ldots)$,
+    где $h_{m} = \sum_{i + j = m} a_{i}b_{j}$
+
+    $\varphi A \rightarrow B$ --- инъективный гомоморфизм,
+    $\varphi(a) = (a, 0, 0, \ldots)$. А значит $A \subset B$
+
+    $x = (0, 1, 0, 0, 0, \ldots)$
+
+    $x^{2} = (0, 0, 1, 0, 0, \ldots)$
+
+    $x^{3} = (0, 0, 0, 1, 0, \ldots)$
+
+    $a \cdot x^{n} = a \cdot (0, 0, \ldots, 0, 1, 0, \ldots) = (0, 0, \ldots, 0, a, 0, \ldots)$
+
+    $f(x) = a_{0} + a_{1}x + a_{2} x^{2} + \cdots + a_{n}x^{n}$
+
+    Кольцо $B$ --- \emph{кольцо многочленов от одной переменной}.
+    Обозн. $A[x]$. $a_{0}, \ldots$ --- \emph{коэффициенты} $f(x)$.
+    $\deg(f)$ --- максимальное $n$, для которого $a_{n} \neq 0$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Свойства многочленов
+  \end{field}
+  \begin{field}
+    $A$ --- целостное кольцо
+    $\Rightarrow$
+    $\deg (f + g) \leq \max(\deg(f), \deg(g)),
+    \deg(fg) = \deg(f) + \deg(g)$
+
+
+    $A$ --- целостное кольцо
+    $\Rightarrow$
+    $A[x]$ --- тоже целостное
+
+    $A$ --- подкольцо коммутативного кольца $K$,
+    $\alpha \in K$
+    $\Rightarrow$
+    $\exists! $ гомоморфизм $\varphi_{\alpha} : A[x] \rightarrow K$,
+    $\varphi_{\alpha}(a) = a \forall a \in A$,
+    $\varphi_{\alpha}(x) = \alpha$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Алгебраические и трансцендентные элементы
+  \end{field}
+  \begin{field}
+    $\alpha$ --- алгебраический над $A$
+    $\Leftrightarrow$
+    $\exists f \in A[x]: \varphi_{\alpha}(f) = 0$
+
+    Если $\varphi_{\alpha}$ --- инъективно, то трансцендентным.
+
+    $\varphi_{\alpha} (f) = 0$ значит $\alpha$ корень $f$. Обозн. $f(\alpha) = 0$.
+  \end{field}
+\end{note}
+
+\section{Алгоритм Евклида. Евклидовы кольца.}
+
+% \begin{note}
+%   \begin{field}
+%     Алгоритм Евклида
+%   \end{field}
+%   \begin{field}
+%     TODO
+%   \end{field}
+% \end{note}
+
+\begin{note}
+  \begin{field}
+    Евклидовы кольца
+  \end{field}
+  \begin{field}
+    $A$ --- евклидово кольцо
+    $\Leftrightarrow$
+    $A$ --- целостное кольцо,
+    $\delta : A \ {0} \rightarrow \mathbb{N} \cup {0}$
+  \end{field}
+\end{note}
+
+\section{Теорема о том, что любое евклидово кольцо является кольцом главных
+  идеалов. Лемма Гаусса.}
+
+\begin{note}
+  \begin{field}
+    Теорема о том, что любое евклидово кольцо является кольцом главных
+    идеалов.
+  \end{field}
+  \begin{field}
+    Всякое евклидово кольцо является кольцом главных идеалов
+
+    Всякое евклидово кольцо является факториальным
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Лемма Гаусса
+  \end{field}
+  \begin{field}
+    $f(x), g(x)$ --- многочлены с целыми коэффициентами.
+    $a = \gcd(a_{i}), b = \gcd(b_{i})$,
+    $c = \gcd(c_{i})$, где $c_{i}$ --- коэффициенты $f(x)g(x)$.
+    $\Rightarrow c = ba$
+  \end{field}
+\end{note}
+
+\section{Неприводимые многочлены. Расширение полей. Алгебраически замкнутые
+поля.}
+
+\begin{note}
+  \begin{field}
+    Неприводимые многочлены
+  \end{field}
+  \begin{field}
+    $f \in K[x], \deg(f) \neq 0$ --- \emph{неприводимый} над полем $K$
+    $\Leftrightarrow$
+    $\nexists g \in K[x], 1 \leq \deg(g) < \deg(f), f$ делится на $g$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Расширение полей
+  \end{field}
+  \begin{field}
+    Поле $K[x]/(f)$ называется расширением поля $K$,
+    где $f$ --- неприводимый многочлен над $K$
+
+    TODO дописать?
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Алгебраически замкнутые поля
+  \end{field}
+  \begin{field}
+    Поле $K$ --- \emph{алгебраически замкнутое}
+    $\Leftrightarrow$
+    $\forall f(x) \in K[x]$ имеет корень
+  \end{field}
+\end{note}
+
+\section{Основная теорема алгебры (алгебраическая замкнутость поля комплексных
+чисел).}
+
+\begin{note}
+  \begin{field}
+    Основная теорема алгебры
+  \end{field}
+  \begin{field}
+    Поле $\mathbb{C}$ алгебраически замкнуто
+
+    TODO леммы
+  \end{field}
+\end{note}
+
+% 42
+\section{Модули. Определение и примеры. Основные свойства. Векторное
+пространство, как модуль.}
+
+\begin{note}
+  \begin{field}
+    Модули
+  \end{field}
+  \begin{field}
+    $A$ --- кольцо.
+    \emph{Левый модуль} (модуль) над $A$ ---
+    абелева группа $M$ c действием $A$ на $M$, если:
+    \begin{enumerate}
+      \item
+      $(a + b)x = ax + bx$
+      \item
+      $a(x + y) = ax + ay$
+      \item
+      $(ab)x = a(bx)$
+      \item
+      $1 \cdot x = x$
+    \end{enumerate}
+    $a, b \in A; x, y \in M$
+
+    Подгруппа $N \subset M$ --- подмодуль
+    $\Leftrightarrow$
+    $AN \subset N$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Примеры модулей
+  \end{field}
+  \begin{field}
+    \begin{itemize}
+      \item
+      любой левый идеал
+      \item
+      любая коммутативная группа есть $\mathbb{Z}$-модуль
+      \item
+      $A[x]$ есть $A$-модуль
+    \end{itemize}
+  \end{field}
+\end{note}
+
+% \begin{note}
+%   \begin{field}
+%     Основные свойства модулей
+%   \end{field}
+%   \begin{field}
+%     TODO
+%   \end{field}
+% \end{note}
+
+\begin{note}
+  \begin{field}
+    Векторное пространство, как модуль.
+  \end{field}
+  \begin{field}
+    Модуль $M$ над полем называется \emph{векторным пространством}.
+
+    $M$ конечно порожден $\Leftrightarrow$
+    $M$ --- конечномерное векторное пространство.
+  \end{field}
+\end{note}
+
+\section{Теоремы о гомоморфизме для модулей. Аннулятор.}
+
+\begin{note}
+  \begin{field}
+    1-я теорема о гомоморфизме для модулей
+  \end{field}
+  \begin{field}
+    $f : M \rightarrow M'$ --- сюръективный гомоморфизм модулей
+    $\Rightarrow \exists$ естественный изоморфизм
+    $M/ \ker(f) \cong M'$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    2-я теорема о гомоморфизме для модулей
+  \end{field}
+  \begin{field}
+    $N, N'$ --- подмодули $M$
+    $\Rightarrow$
+    $(N + N')/N' \cong N/(N \cap N')$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    3-я теорема о гомоморфизме для модулей
+  \end{field}
+  \begin{field}
+    $N, N'$ --- подмодули $M$,
+    $N' \subset N$
+    $\Rightarrow$
+    $M/N \cong (M/N')/(N/N')$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Аннулятор
+  \end{field}
+  \begin{field}
+    $\mathsf{Ann}(M) = \{a | a \in A, ax = 0, \forall x \in M\}$
+
+    Модуль $M$ --- точный $\Leftrightarrow \mathsf{Ann}(M) = 0$
+
+    $\mathsf{Ann}(M)$ --- двусторонний идеал кольца $A$
+  \end{field}
+\end{note}
+
+% 44
+\section{Алгебры. Определения и примеры. Аналог теоремы Кели для алгебр.}
+
+\begin{note}
+  \begin{field}
+    Алгебры
+  \end{field}
+  \begin{field}
+    $A$ --- алгебра над полем $K$ (или $K$-алгебра)
+    $\Leftrightarrow$ $A$ --- векторное пространство над $K$
+    и на $A$ есть умножение:
+    \begin{enumerate}
+      \item
+      $x(y + z) = xy + xz$
+      \item
+      $(x + y)z = xz + yz$
+      \item
+      $(ax)y = x(ay) = a(xy)$
+    \end{enumerate}
+
+    $\forall x, y \in A, a \in K$
+
+    Ассоциативная алгебра,
+    Алгебра с единицей
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Примеры алгебр
+  \end{field}
+  \begin{field}
+    $\mathbb{C}$ --- алгебра над $\mathbb{R}$
+
+    $K$ --- поле $\Rightarrow$
+    $K[x]$ --- $K$-алгебра
+
+    $M_{n}(K)$ --- кольцо матриц
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Аналог теоремы Кели для алгебр.
+  \end{field}
+  \begin{field}
+    $A$ --- $n$-мерная алгебра над полем $K$
+    $\Rightarrow$ $A$ изоморфна некоторой подалгебре в $M_{n}(K)$
+  \end{field}
+\end{note}
+
+\section{Конечномерные алгебры. Минимальный многочлен элемента. Алгебры с
+делением. Обратимость элемента, не являющегося делителем нуля.}
+
+\begin{note}
+  \begin{field}
+    Конечномерные алгебры
+  \end{field}
+  \begin{field}
+    Алгебра $A$ над полем $K$ --- конечномерная
+    $\Leftrightarrow$
+    конечномерно векторное пространство $A$ над $K$.
+
+    Алгебра $A$ над полем $K$ --- конечно порожденная
+    $\Leftrightarrow$
+    существует конечное множество элементов пораждающих $A$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Минимальный многочлен элемента
+  \end{field}
+  \begin{field}
+    Многочлен $f(x) \in K[x]$ для которого $f(a) = 0$
+    называется аннулирующим элемент $a$
+
+    $A$ --- конечномерная алгебра над полем $K$, $a \in A$ $\Rightarrow$ $f(x)$
+    аннулирующий $a$, степень которого минимальна и старший коэффициент равен 1,
+    называется минимальным многочленом элемента $a$ над $K$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Алгебры с делением
+  \end{field}
+  \begin{field}
+    $K$-алгебра $A$, $1 \in A$, любой элемент обратим
+    $\Rightarrow$ $A$ --- алгебра с делением
+
+    \begin{theorem}
+      $A$ --- конечномерная ассоциативная коммутативная алгебра с делением над полем $\mathbb{R}$ (т.е. $A$ --- поле)
+      $\Rightarrow$
+      либо $A = \mathbb{R}$, либо $A = \mathbb{C}$
+    \end{theorem}
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Обратимость элемента, не являющегося делителем нуля
+  \end{field}
+  \begin{field}
+    \begin{theorem}
+      $A$ --- конечномерная алгебра над полем $K$.
+      $\Rightarrow$
+      $\forall a \in A, a$ либо обратим, либо является делителем нуля.
+    \end{theorem}
+  \end{field}
+\end{note}
+
+\section{Задание алгебры. Тело кватернионов. Теорема Фробениуса (б/д).}
+
+\begin{note}
+  \begin{field}
+    Задание алгебры
+  \end{field}
+  \begin{field}
+    $A$ --- конечномерная алгебра над полем $K$
+    и $e_{1}, e_{2}, \ldots, e_{n}$ --- базис $A$ над $K$.
+    $\Rightarrow$
+    Соотношения $e_{i}e_{j} = \sum_{k=1}^{n} g_{ij}^{k} e_{k}$
+    задают структуру $K$-алгебры на $A$.
+
+    $a = a_{1}e_{1} + a_{2}e_{2} + \cdots + a_{n}e_{n}$,
+    $b = b_{1}e_{1} + b_{2}e_{2} + \cdots + b_{n}e_{n}$
+    $\Rightarrow$
+    $ab = \left(\sum_{i=1}^{n} a_{i}e_{i}\right) \left(\sum_{j=1}^{n} b_{j}e_{j}\right) =$
+    $\sum_{i=1}^{n}\sum_{j=1}^{n}a_{i}b_{j}e_{i}e_{j} =$
+    $\sum_{i=1}^{n}\sum_{j=1}^{n}\sum_{k=1}^{n}a_{i}b_{j}g_{ij}^{k}e_{k}$
+  \end{field}
+\end{note}
+
+% \begin{note}
+%   \begin{field}
+%     Тело кватерионов
+%   \end{field}
+%   \begin{field}
+%     TODO
+%   \end{field}
+% \end{note}
+
+\begin{note}
+  \begin{field}
+    Теорема Фробениуса
+  \end{field}
+  \begin{field}
+    \begin{theorem}[Фробениус]
+      $A$ --- конечномерная ассоциативная алгебра с делением над полем $\mathbb{R}$.
+      $\Rightarrow$
+      либо $A = \mathbb{R}$,
+      либо $A = \mathbb{C}$,
+      либо $A = \mathbb{H}$
+    \end{theorem}
+  \end{field}
+\end{note}
+
+\section{Алгебры с делением над полем комплексных чисел. Теорема Фробениуса
+(коммутативный случай). Групповая алгебра. Дифференцирование алгебр.}
+
+% \begin{note}
+%   \begin{field}
+%     Алгебры с делением над полем комплексных чисел
+%   \end{field}
+%   \begin{field}
+%     TODO
+%   \end{field}
+% \end{note}
+
+\begin{note}
+  \begin{field}
+    Теорема Фробениуса (коммутативный случай)
+  \end{field}
+  \begin{field}
+    \begin{theorem}[Фробениус (коммутативный случай)]
+      $A$ --- конечномерная ассоциативная коммутативная алгебра с делением над полем $\mathbb{R}$ (т.е. $A$ --- поле).
+      $\Rightarrow$
+      либо $A = \mathbb{R}$,
+      либо $A = \mathbb{C}$.
+    \end{theorem}
+  \end{field}
+\end{note}
+
+% \begin{note}
+%   \begin{field}
+%     Групповая алгебра
+%   \end{field}
+%   \begin{field}
+%     TODO
+%   \end{field}
+% \end{note}
+
+\begin{note}
+  \begin{field}
+    Дифференцирование алгебр
+  \end{field}
+  \begin{field}
+    $A$ --- алгебра над полем $K$.
+    Дифференциерование алгебры это $d : A \rightarrow A$, если:
+    \begin{enumerate}
+      \item
+      $d (ax) = adx$
+      \item
+      $d (x + y) = dx + dy$
+      \item
+      $d (xy) = (dx) y + x (dy)$
+    \end{enumerate}
+
+    $\forall x, y \in A, a \in K$
+  \end{field}
+\end{note}
+
+% 50
+\end{document}
