@@ -1,0 +1,191 @@
+% -*- coding:utf-8 -*-
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[english,russian]{babel}
+\newenvironment{note}{\paragraph{NOTE:}}{}
+\newenvironment{field}{\paragraph{field:}}{}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+\newtheorem{theorem}{Th}
+
+\begin{document}
+
+\begin{note}
+  \begin{field}
+    Расширение поля
+  \end{field}
+  \begin{field}
+    $E, k$ --- два поля,
+    $k \subset E$
+    $\Leftrightarrow$
+    $E$ --- \emph{расширение} $k$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Конечное (бесконечномерное) расширение
+  \end{field}
+  \begin{field}
+    Расширение $E$ конечно (бесконечно) $\Leftrightarrow$ $E$ --- конечномерно
+    (бесконечномерно) как линейное пространство над $k$
+
+    Т.е. $E$ --- конечно над $k$
+    $\Leftrightarrow$
+    $\exists a_{1}, \ldots, a_{n} \in E : \forall x \in E$,
+    $x = \alpha_{1}a_{1} + \cdots + \alpha_{n} a_{n}$,
+    где $\alpha_{1}, \ldots \in k$.
+
+    $[E : k]$ (степень $E$ над $k$) ---
+    размерность $E$ как линейного пространства
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Теорема о конечных расширениях полей
+  \end{field}
+  \begin{field}
+    \begin{theorem}
+      Пусть $E$ --- конечное расширение поля $k$,
+      $F$ --- конечное расширение поля $E$.
+      $\Rightarrow$
+      $F$ --- конечное расширение поля $k$
+      и $[F : k] = [E : k][F : E]$.
+    \end{theorem}
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Алгебраический элемент
+  \end{field}
+  \begin{field}
+    $x \in E$ --- алгебраический
+    $\Leftrightarrow$
+    $x$ является корнем многочлена с коэффициентами из $k$
+    ($\exists \alpha_{0}, \ldots, \alpha_{n} \in k :
+    \alpha_{0} + \alpha_{1}x + \cdots \alpha_{n}x^{n} = 0$)
+
+    Расширение $E$ поля $k$ --- алгебраическое
+    $\Leftrightarrow$
+    $\forall e \in E : e$ --- алгебраический.
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Теорема о алгебраических расширениях конечных полей
+  \end{field}
+  \begin{field}
+    Любое конечное расширение является алгебраическим
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Теорема о наименьшем подполе
+  \end{field}
+  \begin{field}
+    $E$ --- расширение поля $k$.
+    $a_{1}, \ldots, a_{n} \in E$.
+    $k(a_{1}, \ldots, a_{n})$ --- наименьшее подполе $E$,
+    содержащее $a_{1}, \ldots, a_{n}$.
+
+    \begin{theorem}
+      $a \in E$ алгебраичен над $k$
+      $\Rightarrow k(a)$ --- конечное расширение поля $k$
+    \end{theorem}
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Теорема о алгебраических расширениях
+  \end{field}
+  \begin{field}
+    \begin{theorem}
+      $E$ --- алгебраическое расширение поля $k$
+      и $F$ --- алгебраическое расширение поля $E$
+      $\Rightarrow F$ --- алгебраическое расширение поля $k$.
+    \end{theorem}
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Теорема о существовании расширения, в котором многчлен имеет корень
+  \end{field}
+  \begin{field}
+    \begin{theorem}
+      $\forall p(x) \in k[x] \exists$
+      расширение поля $k$ в котором $p(x)$ имеет корень
+    \end{theorem}
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Характеристика поля
+  \end{field}
+  \begin{field}
+    $k$ --- поле
+
+    Пусть $\exists p : p \cdot 1 = 0$
+    и $p$ --- минимально,
+    $\Rightarrow$
+    $p = char(k)$.
+
+    Если такого $p$ не существует, то $char(k) = 0$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Свойства характеристики
+  \end{field}
+  \begin{field}
+    Простое число или ноль
+
+    $(a + b)^{p} = a^{p} + b^{p}$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Морфизм Фробениуса
+  \end{field}
+  \begin{field}
+    $(a + b)^{p} = a^{p} + b^{p}$,
+    $(ab)^{p} = a^{p}b^{p}$
+    $\Rightarrow$
+    $f : k \mapsto k^{p}, f(x) = x^{p}$ --- гомоморфизм
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Совершенное поле
+  \end{field}
+  \begin{field}
+    $char(k) = 0$ или $char(k) = p$, $k = k^{p}$
+  \end{field}
+\end{note}
+
+\begin{note}
+  \begin{field}
+    Признак совершенного поля
+  \end{field}
+  \begin{field}
+    $k$ --- конечное поле
+    $\Rightarrow$
+    $k$ --- совершенное поле
+  \end{field}
+\end{note}
+
+\end{document}
